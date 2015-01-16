@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.1.0/lumen/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.2.0/lumen/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -27,7 +27,7 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="COMP 313/413 Lecture Notes 1.0 documentation" href="index.html" />
     <link rel="next" title="Summary" href="summary.html" />
@@ -56,7 +56,6 @@
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
             
                 <li><a href="genindex.html">Index</a></li>
             
@@ -198,12 +197,16 @@
 <div class="section" id="required-development-tools">
 <h3>Required Development Tools<a class="headerlink" href="#required-development-tools" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p class="first">Java Development Kit (JDK) 6 or 7 through your package management
+<li><p class="first">Java Development Kit (JDK) 6 or higher through your package management
 system or from
 <a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads">Oracle</a>;
 to verify, visit <a class="reference external" href="http://www.java.com/en/download/installed.jsp">this site</a>
 and, if necessary, download Java from the same place.
 (On a Mac, be sure to do this in Safari.)</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Check specific prerequisite details for your platform; in particular, on the Mac, a Java 6 JDK is required to run IDEA, though you can (and should) use a Java 8 JDK as development target.</p>
+</div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">On Windows, it is usually best to install the JDK in a location that does not contain spaces.</p>
@@ -219,7 +222,7 @@ and, if necessary, download Java from the same place.
 <li>detailed <em>usage instructions</em> are <a class="reference external" href="https://github.com/pfn/android-sdk-plugin">half way down past the change log</a></li>
 </ul>
 </li>
-<li><p class="first"><a class="reference external" href="http://mercurial.selenic.com">Mercurial (hg)</a> distributed version control system (DVCS)</p>
+<li><p class="first"><a class="reference external" href="http://git-scm.com/">Git</a> distributed version control system (DVCS)</p>
 </li>
 </ul>
 </div>
@@ -290,7 +293,7 @@ keyboard present</em> checked</p>
 <a class="reference internal image-reference" href="_images/avdconfig.png"><img alt="Recommended AVD configuration" src="_images/avdconfig.png" /></a>
 <ul>
 <li><p class="first">to run the Android emulator from the command line, where n4 is the name you chose for the virtual device you just created:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ $ANDROID_HOME</span>/tools/emulator @n4 &amp;
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ $ANDROID_HOME</span>/tools/emulator @n4 <span class="p">&amp;</span>
 </pre></div>
 </div>
 </li>
@@ -301,9 +304,8 @@ you can follow <a class="reference external" href="http://developer.android.com/
 to enable it.</p>
 </li>
 <li><p class="first">Fork the desired project from
-<a class="reference external" href="https://bitbucket.org/lucoodevcourse">this collection</a>,
-then clone it using Mercurial (hg);
-or download the corresponding zip file (discouraged).</p>
+<a class="reference external" href="https://github.com/LoyolaChicagoCode?query=android-scala">this collection</a>,
+then clone it to your local workstation using <a class="reference external" href="http://git-scm.com">Git</a>.</p>
 </li>
 </ul>
 </div>
@@ -336,7 +338,7 @@ Android SDK <em>(recommended)</em></p>
 <div class="section" id="starting-the-emulator">
 <h3>Starting the emulator<a class="headerlink" href="#starting-the-emulator" title="Permalink to this headline">¶</a></h3>
 <p>To start the emulator:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>emulator @YourAVD &amp;
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>emulator @YourAVD <span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>It will take the emulator a couple of minutes to boot to your AVD&#8217;s
@@ -379,7 +381,7 @@ In this example, the tag for the main activity is</p>
 <p>This quickly results in too much information.
 To view only the messages pertaining, say, to a particular tag,
 you can filter by that tag:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>adb logcat | grep hello
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>adb logcat <span class="p">|</span> grep hello
 </pre></div>
 </div>
 </div>
@@ -420,12 +422,12 @@ instead.</p>
 </div>
 <div class="section" id="starting-from-scratch">
 <h3>Starting from scratch<a class="headerlink" href="#starting-from-scratch" title="Permalink to this headline">¶</a></h3>
-<p>I have not been able to get pfn&#8217;s gen-android task to work even though
-I tried with a global installation of the plugin.</p>
+<p>We have not been able to get pfn&#8217;s gen-android task to work even though
+we tried with a global installation of the plugin.</p>
 <p>In addition to the usual <a class="reference external" href="http://www.scala-sbt.org/0.13/tutorial/Directories.html">sbt directory structure</a>, the key
 ingredients are</p>
 <ul>
-<li><p class="first"><tt class="docutils literal"><span class="pre">build.sbt</span></tt> like in <a class="reference external" href="https://bitbucket.org/lucoodevcourse">our examples</a></p>
+<li><p class="first"><tt class="docutils literal"><span class="pre">build.sbt</span></tt> like in <a class="reference external" href="https://github.com/LoyolaChicagoCode?query=android-scala">our examples</a></p>
 <ul class="simple">
 <li>set project name and version as desired</li>
 <li>review the library dependencies, e.g., choose between Mockito and
@@ -566,6 +568,7 @@ plugin.)<ul>
 <li>Code Outline 2</li>
 <li>Key Promoter (helps you learn keyboard shortcuts)</li>
 <li>Markdown</li>
+<li>Scala import organizer</li>
 </ul>
 </li>
 <li>These are useful additional sbt plugins. <a class="reference external" href="http://www.scala-sbt.org/0.13.5/docs/Getting-Started/Using-Plugins.html">You can install them per
@@ -622,7 +625,7 @@ automatic source code formatting using Scalariform</li>
     </p>
     <p>
         &copy; Copyright 2014, Konstantin Läufer.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.1.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>
   </div>
 </footer>
