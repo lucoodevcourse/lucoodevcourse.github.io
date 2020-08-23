@@ -1,0 +1,637 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Basics of Object-Oriented Programming &mdash; COMP 313/413 Lecture Notes 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Overview of a Lightweight Development Process" href="devprocess.html" />
+    <link rel="prev" title="1. Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> COMP 313/413 Lecture Notes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Basics of Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reference-semantics-vs-value-semantics">2.1. Reference semantics vs. value semantics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples">2.1.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">2.1.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#equality-vs-identity">2.2. Equality vs. identity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.2.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.2.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#parametric-polymorphism-generics">2.3. Parametric polymorphism (generics)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">2.3.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">2.3.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#relationships-among-classes-and-interfaces">2.4. Relationships among classes and interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-interface-level-relationships">2.4.1. Class/interface-level relationships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instance-level-relationships">2.4.2. Instance-level relationships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">2.4.3. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#class-interface-continuum">2.5. Class-interface continuum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">2.5.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">2.5.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#subtyping-vs-subclassing-inheritance">2.6. Subtyping vs. subclassing/inheritance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">2.6.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">2.6.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#subtype-polymorphism-static-vs-dynamic-type">2.7. Subtype polymorphism: static vs. dynamic type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id29">2.7.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">2.7.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#being-a-good-descendant-of-java-lang-object-system-object">2.8. Being a good descendant of java.lang.Object/System.Object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id33">2.8.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">2.8.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#clone-in-the-context-of-the-composite-pattern">2.9. Clone in the context of the Composite pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id42">2.9.1. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#packages-namespaces">2.10. Packages/namespaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id46">2.10.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id47">2.10.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#member-access">2.11. Member access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id51">2.11.1. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="devprocess.html">3. Overview of a Lightweight Development Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">4. Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">5. Appendix: Course Syllabi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">6. Appendix: TODO</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">COMP 313/413 Lecture Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">2. </span>Basics of Object-Oriented Programming</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/basicoop.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basics-of-object-oriented-programming">
+<h1><span class="section-number">2. </span>Basics of Object-Oriented Programming<a class="headerlink" href="#basics-of-object-oriented-programming" title="Permalink to this headline">¶</a></h1>
+<p>The topics discussed in this chapter are considered the basics of
+object-oriented programming. Some of them are language-independent,
+others are specific to C#, Java, or Scala. These topics, except
+perhaps for the last two, are supposed to be covered by the
+CS 1/2 prerequisite chain for this course.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>update all examples and references — meanwhile, please go
+<a class="reference external" href="http://laufer.cs.luc.edu/teaching/313/handouts/oop-basics">here</a></p>
+</div>
+<div class="section" id="reference-semantics-vs-value-semantics">
+<h2><span class="section-number">2.1. </span>Reference semantics vs. value semantics<a class="headerlink" href="#reference-semantics-vs-value-semantics" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>Value semantics:</em> variables directly contain values.</p></li>
+<li><p><em>Reference semantics:</em> variables contain addresses that refer (point)
+to objects.</p></li>
+</ul>
+<div class="section" id="examples">
+<h3><span class="section-number">2.1.1. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/IdentityAndEquality.java">misc/IdentityAndEquality.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/Comparing.scala">misc/Comparing.scala</a></p></li>
+</ul>
+</div>
+<div class="section" id="references">
+<h3><span class="section-number">2.1.2. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://c2.com/cgi/wiki?JavaDoesntPassByValue">Java</a></p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/ms173109.aspx">C#</a> (see also <em>Effective C#</em> item 6)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="equality-vs-identity">
+<h2><span class="section-number">2.2. </span>Equality vs. identity<a class="headerlink" href="#equality-vs-identity" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>Equality:</em> are two (possibly) different objects equivalent?</p></li>
+<li><p><em>Identity:</em> do two references refer to the same objects?</p></li>
+<li><p>How are equality and identity related?</p></li>
+<li><p>Reconciling value and reference semantics: identity of objects
+explained as equality of addresses.</p></li>
+</ul>
+<div class="section" id="id2">
+<h3><span class="section-number">2.2.1. </span>Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/IdentityAndEquality.java">misc/IdentityAndEquality.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/Comparing.scala">misc/Comparing.scala</a></p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">2.2.2. </span>References<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object)">Java</a>
+(see also <em>Effective Java</em> items 8, 9; see also <a class="reference external" href="http://www.artima.com/lejava/articles/equality.html">here</a>)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/dd183752.aspx">C#</a> (see also <em>Effective C#</em> items 6, 26)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="parametric-polymorphism-generics">
+<h2><span class="section-number">2.3. </span>Parametric polymorphism (generics)<a class="headerlink" href="#parametric-polymorphism-generics" title="Permalink to this headline">¶</a></h2>
+<p>Familiar from data structures course:</p>
+<ul class="simple">
+<li><p>without generics: <code class="docutils literal notranslate"><span class="pre">Stack</span></code> (of objects); loose typing</p></li>
+<li><p>without generics: <code class="docutils literal notranslate"><span class="pre">IntStack</span></code>, <code class="docutils literal notranslate"><span class="pre">StringStack</span></code>, <code class="docutils literal notranslate"><span class="pre">BookStack</span></code>;
+strict typing but lots of duplicate boilerplate code</p></li>
+<li><p>with generics: <code class="docutils literal notranslate"><span class="pre">Stack&lt;Int&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">Stack&lt;String&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">Stack&lt;Book&gt;</span></code>;
+strict typing without code duplication</p></li>
+</ul>
+<p>Relatively easy to use, can be challenging to incorporate correctly in
+the design of one’s abstractions.</p>
+<div class="section" id="id9">
+<h3><span class="section-number">2.3.1. </span>Examples<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/Comparing.java">misc/Comparing.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/Comparing.scala">misc/Comparing.scala</a></p></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3><span class="section-number">2.3.2. </span>References<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/generics">Java</a>
+(<em>Effective Java</em> chapter 5: items 23-29; see also <a class="reference external" href="http://docs.oracle.com/javase/tutorial/extra/generics/index.html">this tutorial</a>
+and <a class="reference external" href="http://www.angelikalanger.com/GenericsFAQ/JavaGenericsFAQ.html">here</a>
+for advanced issues)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/512aeb7t.aspx">C#</a></p></li>
+<li><p><a class="reference external" href="http://docs.scala-lang.org/tutorials/tour/generic-classes.html">Scala</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="relationships-among-classes-and-interfaces">
+<h2><span class="section-number">2.4. </span>Relationships among classes and interfaces<a class="headerlink" href="#relationships-among-classes-and-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>These are common relationships among concepts and are <a class="reference external" href="http://en.wikipedia.org/wiki/Class_diagram#Relationships">part of UML's
+class diagrams</a>.</p>
+<div class="section" id="class-interface-level-relationships">
+<h3><span class="section-number">2.4.1. </span>Class/interface-level relationships<a class="headerlink" href="#class-interface-level-relationships" title="Permalink to this headline">¶</a></h3>
+<p>These relationships are between classes and/or interfaces, so they
+<em>cannot</em> change at run time.</p>
+<p>From strong to weak:</p>
+<ul class="simple">
+<li><p><em>is-a</em>, <em>realizes-a</em>: generalization/specialization (subtyping)</p></li>
+<li><p><em>uses-a</em>: dependency</p></li>
+</ul>
+</div>
+<div class="section" id="instance-level-relationships">
+<h3><span class="section-number">2.4.2. </span>Instance-level relationships<a class="headerlink" href="#instance-level-relationships" title="Permalink to this headline">¶</a></h3>
+<p>These relationships are between instances, so they <em>can</em> change at run
+time.</p>
+<p>From strong to weak:</p>
+<ul class="simple">
+<li><p><em>owns-a</em>: composition</p></li>
+<li><p><em>part-of</em>: aggregation</p></li>
+<li><p><em>has-a</em> or other specific relationship: association</p></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3><span class="section-number">2.4.3. </span>Examples<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/Animals.java">misc/Animals.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/Animals.scala">misc/Animals.scala</a></p></li>
+<li><p>Figure <a class="reference internal" href="#fig-vehiclesuml"><span class="std std-ref">A UML class diagram representing a taxonomy of vehicles.</span></a></p></li>
+</ul>
+<div class="figure align-default" id="id57">
+<span id="fig-vehiclesuml"></span><a class="reference internal image-reference" href="_images/VehiclesUML.png"><img alt="UML class diagram representing a taxonomy of vehicles" src="_images/VehiclesUML.png" style="width: 102.9px; height: 45.1px;" /></a>
+<p class="caption"><span class="caption-text">A UML class diagram representing a taxonomy of vehicles.</span><a class="headerlink" href="#id57" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="class-interface-continuum">
+<h2><span class="section-number">2.5. </span>Class-interface continuum<a class="headerlink" href="#class-interface-continuum" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>Concrete class</em> (C++, C#, Java, Scala): can be instantiated. All
+specified methods are fully implemented.</p></li>
+<li><p><em>Abstract class</em> (C++, C#, Java, Scala): cannot be instantiated. Some
+or all of the specified methods are not implemented. A class cannot
+extend more than one abstract class.</p></li>
+<li><p><em>Trait</em> (Scala only): cannot be instantiated directly. Some or all of
+the specified methods are not implemented. A class or trait can
+extend zero or more traits, and member lookup is automatically
+disambiguated based on trait order (see <a class="reference external" href="http://docs.scala-lang.org/tutorials/tour/traits.html">traits</a> and <a class="reference external" href="http://docs.scala-lang.org/tutorials/tour/mixin-class-composition.html">mixins</a>
+for details).</p></li>
+<li><p><em>Interface</em> (Java, C# only): limit case of a fully abstract class for
+specification purposes only. None of the specified methods are
+implemented, and there are no instance variables.</p></li>
+</ul>
+<p>Related to the single-responsibility and interface-segregation principles.</p>
+<div class="section" id="id16">
+<h3><span class="section-number">2.5.1. </span>Examples<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/Animals.java">misc/Animals.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/Animals.scala">misc/Animals.scala</a></p></li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h3><span class="section-number">2.5.2. </span>References<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Java</a>
+(see also <em>Effective Java</em> items 18, 19)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/ms173150.aspx">C#</a> (see
+also <em>Effective C#</em> items 22, 23)</p></li>
+<li><p><a class="reference external" href="http://docs.scala-lang.org/tutorials/tour/abstract-types.html">Scala</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="subtyping-vs-subclassing-inheritance">
+<h2><span class="section-number">2.6. </span>Subtyping vs. subclassing/inheritance<a class="headerlink" href="#subtyping-vs-subclassing-inheritance" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://en.wikipedia.org/wiki/Subtyping">Subtyping</a> allows
+substituting a more specific object for a more
+general one, for example, when passed as an argument or assigned to
+a variable.</p></li>
+<li><p><a class="reference external" href="http://en.wikipedia.org/wiki/Inheritance_(computer_science)">Inheritance</a> is a
+mechanism for a subclass to reuse state and  behavior from a
+superclass.</p>
+<ul>
+<li><p>inherit methods and fields</p></li>
+<li><p>add fields</p></li>
+<li><p>add or replace/refine methods</p></li>
+</ul>
+</li>
+<li><p>Inheriting from a superclass enables weak syntactic subtyping. (In
+some languages, this relationship can be public or nonpublic.)</p></li>
+<li><p>The <a class="reference external" href="http://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov Substitution Principle (LSP)</a>
+defines strong semantic (behavioral) subtyping.</p></li>
+<li><p>Implementing or extending an interface also enables syntactic
+subtyping (and semantic subtyping because interfaces have no
+behavior). Extending a trait also enables syntactic subtyping.</p></li>
+</ul>
+<div class="section" id="id23">
+<h3><span class="section-number">2.6.1. </span>Examples<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/Animals.java">misc/Animals.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/Animals.scala">misc/Animals.scala</a></p></li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h3><span class="section-number">2.6.2. </span>References<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Java</a>
+(see also <em>Effective Java</em> item 17; see also <a class="reference external" href="http://www.techrepublic.com/article/avoid-these-java-inheritance-gotchas/5031837">these pitfalls</a>)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/ms173149.aspx">C#</a> (see
+also <em>Effective C#</em> item 22)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="subtype-polymorphism-static-vs-dynamic-type">
+<h2><span class="section-number">2.7. </span>Subtype polymorphism: static vs. dynamic type<a class="headerlink" href="#subtype-polymorphism-static-vs-dynamic-type" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>Static type:</em> declared type of a variable.</p></li>
+<li><p><em>Dynamic type:</em> actual type of the object to which the variable
+refers.</p></li>
+<li><p><em>Dynamic method binding:</em> <code class="docutils literal notranslate"><span class="pre">x.f(a1,</span> <span class="pre">a2,</span> <span class="pre">...)</span></code>. Two steps:</p>
+<ol class="arabic simple">
+<li><p>Verify whether receiver x supports method f based on static
+type.</p></li>
+<li><p>Search for version of f to be invoked starting from dynamic type
+and proceeding upward until found.</p></li>
+</ol>
+</li>
+<li><p>How are static and dynamic type of a variable related?</p></li>
+<li><p>If step 1 succeeds, will step 2 always succeed as well?</p></li>
+<li><p><em>Casting:</em> treat an object as if it had a different static type. Three
+different situations:
+- <em>downcast</em>
+- <em>upcast</em>
+- <em>crosscast</em></p></li>
+<li><p>Overloading versus overriding.
+- <code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code>/<code class="docutils literal notranslate"><span class="pre">override</span></code> correctness in Java and Scala</p></li>
+</ul>
+<div class="section" id="id29">
+<h3><span class="section-number">2.7.1. </span>Examples<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/MethodBinding.java">misc/MethodBinding.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/InterfaceCast.java">misc/InterfaceCast.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/Super.java">misc/Super.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/Super2.java">misc/Super2.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/MethodBinding.scala">misc/MethodBinding.scala</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/InterfaceCast.scala">misc/InterfaceCast.scala</a></p></li>
+</ul>
+</div>
+<div class="section" id="id30">
+<h3><span class="section-number">2.7.2. </span>References<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html">Java</a>
+(see also <em>Effective Java</em> item 52)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/ms173152.aspx">C#</a> (see
+also <em>Effective C#</em> item 3)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="being-a-good-descendant-of-java-lang-object-system-object">
+<h2><span class="section-number">2.8. </span>Being a good descendant of java.lang.Object/System.Object<a class="headerlink" href="#being-a-good-descendant-of-java-lang-object-system-object" title="Permalink to this headline">¶</a></h2>
+<p>Classes are usually required to provide the following methods (these
+specific ones are for Java):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">toString</span></code> (for displaying instances in a meaningful way)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">equals</span></code> (if an instance can be in an equivalence class that include
+other instances)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hashCode</span></code> (ditto)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compareTo</span></code> (if instances are ordered)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clone</span></code> (if instances are mutable)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finalize</span></code> (if instances need to release resources)</p></li>
+</ul>
+<p>Also related to the Liskov substitution principle.</p>
+<div class="section" id="id33">
+<h3><span class="section-number">2.8.1. </span>Examples<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/IdentityAndEquality.java">misc/IdentityAndEquality.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/Comparing.java">misc/Comparing.java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-scala/tree/master/src/main/scala/misc/Comparing.scala">misc/Comparing.scala</a></p></li>
+</ul>
+</div>
+<div class="section" id="id37">
+<h3><span class="section-number">2.8.2. </span>References<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html">Java</a>
+(see also <em>Effective Java</em> items 8 through 12; see also <a class="reference external" href="http://www.artima.com/lejava/articles/equality.html">here</a> for equals,
+below for clone; detailed Javadoc is <a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html">here</a>)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/ms173149.aspx">C#</a> (see
+also <em>Effective C#</em> items 5, 9, 10, 27)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="clone-in-the-context-of-the-composite-pattern">
+<h2><span class="section-number">2.9. </span>Clone in the context of the Composite pattern<a class="headerlink" href="#clone-in-the-context-of-the-composite-pattern" title="Permalink to this headline">¶</a></h2>
+<p>In general, cloning allows you to make a copy of an object. The clone
+method in Java is similar to the copy constructor in C++, but it is an
+ordinary method, unlike the copy constructor. Once you have the
+original object and its clone, then you can modify each one
+independently. Accordingly, cloning is necessary only if the objects
+are mutable.</p>
+<p>Cloning models the real-life situation where you build a prototype of
+something, say a car or a piece of furniture, and once you like it,
+you clone it as many times as you want. These things are composites,
+and the need to be cloned deeply (recursively).</p>
+<p>As another example, imagine a parking garage with a list of cars that
+have access to it. To build another garage to handle the growing
+demand, you can clone the garage and the customer access list. But the
+(physical) cars should not get cloned. That’s because the garage is
+not composed of the cars.</p>
+<p>As we can see, the conceptual distinction between aggregation and
+composition has significant consequences for the implementation of the
+relationship. True, both relationships are represented as references
+in Java. However, composites usually require a deep clone (if cloning
+is supported) where each parent is responsible for cloning its own
+state and recursively cloning its children.</p>
+<p><em>As mentioned above, you don’t need to support cloning at all if your
+objects are immutable because you wouldn’t be able to distinguish the
+original from the clone anyway.</em></p>
+<div class="section" id="id42">
+<h3><span class="section-number">2.9.1. </span>References<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html">Java</a>
+(see also <em>Effective Java</em> item 11; see also <a class="reference external" href="http://www.artima.com/objectsandjava/webuscript/ClonCollInner1.html">here</a>
+for more detail)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/system.object.memberwiseclone.aspx">C#</a>
+(see also <em>Effective C#</em> items 14, 27)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="packages-namespaces">
+<h2><span class="section-number">2.10. </span>Packages/namespaces<a class="headerlink" href="#packages-namespaces" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Mechanism for grouping related or collaborating classes (cf. default
+package-level member access).</p></li>
+<li><p>In Java, implemented as mapping from fully qualified class names to file
+system. In Scala, this is much looser.</p></li>
+</ul>
+<div class="section" id="id46">
+<h3><span class="section-number">2.10.1. </span>Examples<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LoyolaChicagoCode/misc-java/tree/master/src/main/java/misc/Outer.java">misc/Outer.java</a></p></li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h3><span class="section-number">2.10.2. </span>References<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/package">Java</a> (see
+also <a class="reference external" href="http://www.artima.com/objectsandjava/webuscript/PackagesAccess1.html">here</a>)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/0d941h9d.aspx">C#</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="member-access">
+<h2><span class="section-number">2.11. </span>Member access<a class="headerlink" href="#member-access" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>public</p></li>
+<li><p>protected</p></li>
+<li><p>default (package)</p></li>
+<li><p>private</p></li>
+</ul>
+<p>Related to the information hiding and open-closed principles.</p>
+<div class="section" id="id51">
+<h3><span class="section-number">2.11.1. </span>References<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html">Java</a>
+(see also <em>Effective Java</em> items 13, 14, 15; see also <a class="reference external" href="http://www.artima.com/objectsandjava/webuscript/PackagesAccess1.html">here</a>)</p></li>
+<li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/ms173121.aspx">C#</a> (see
+also <a href="#id55"><span class="problematic" id="id56">*</span></a>Effective C# item 1)</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="devprocess.html" class="btn btn-neutral float-right" title="3. Overview of a Lightweight Development Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="1. Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2014, Konstantin Läufer
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
