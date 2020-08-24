@@ -1,3 +1,8 @@
+commit aca5576
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated office hour times
+
 commit 35b2d3b
 Author: Konstantin Läufer <klaeufer@gmail.com>
 
