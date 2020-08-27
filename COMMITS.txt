@@ -1,3 +1,13 @@
+commit a3ae10f
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated outline
+
+commit a3f812c
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated syllabus for fall 2020
+
 commit cc72454
 Author: Konstantin Läufer <klaeufer@gmail.com>
 
