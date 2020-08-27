@@ -1,3 +1,18 @@
+commit cc72454
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated syllabus for fall 2020
+
+commit a622d9b
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added course software
+
+commit 97a8188
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added course outline
+
 commit b01f493
 Author: Konstantin Läufer <klaeufer@gmail.com>
 
