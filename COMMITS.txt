@@ -1,3 +1,8 @@
+commit 6652914
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    clarified Java public class file name requirement
+
 commit ca752d8
 Author: Konstantin Läufer <klaeufer@gmail.com>
 
