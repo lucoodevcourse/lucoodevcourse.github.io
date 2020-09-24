@@ -1,3 +1,8 @@
+commit e77d1a0
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    improved Effective Java references
+
 commit 6652914
 Author: Konstantin Läufer <klaeufer@gmail.com>
 
