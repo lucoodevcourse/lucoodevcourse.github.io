@@ -1,3 +1,8 @@
+commit ca752d8
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    replaced finalize with close
+
 commit 06d795a
 Author: Konstantin Läufer <klaeufer@gmail.com>
 
