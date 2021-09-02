@@ -1,0 +1,189 @@
+commit 0374b8e
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added f20 weekly syllabus
+
+commit 9356f0c
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated deploy script
+
+commit e77d1a0
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    improved Effective Java references
+
+commit 6652914
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    clarified Java public class file name requirement
+
+commit ca752d8
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    replaced finalize with close
+
+commit 06d795a
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    changed links to basic OO Java examples to forked versions
+
+commit 2bacf4e
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    update course software info
+
+commit a3ae10f
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated outline
+
+commit a3f812c
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated syllabus for fall 2020
+
+commit cc72454
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated syllabus for fall 2020
+
+commit a622d9b
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added course software
+
+commit 97a8188
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added course outline
+
+commit b01f493
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added section on course software
+
+commit aca5576
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated office hour times
+
+commit 35b2d3b
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added sync session and office hour times
+
+commit 5f65e16
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    fixed Sakai and MS Teams links
+
+commit 93b466a
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added syllabus for fall 2020
+
+commit 27b4180
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    made configuration consistent with PL notes
+
+commit 8deb443
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    made configuration consistent with PL notes
+
+commit c341711
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    added external links to readme
+
+commit 9b2b589
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    added links to chapters to readme
+
+commit 6934bc5
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    added readme
+
+commit c00db96
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    updated embedded links to code examples
+
+commit 9d4ce9a
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    updated embedded links to code examples
+
+commit 6c2bc33
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    updated info on dev tools
+
+commit 5602002
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    made image URLs relative
+
+commit 77db891
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    fixed link to sbt-stats plugin
+
+commit 8f5c7dc
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    improved instructions for setting ANDROID_HOME
+
+commit 4312025
+Author: Konstantin Läufer <laufer@cs.luc.edu>
+
+    Update and rename .hgignore to .gitignore
+
+commit d4f8ad2
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    fixed formatting in cpd4sbt setting recommendation
+
+commit 1985275
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    added cpd4sbt setting recommendation
+
+commit bf8322b
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    added list of useful sbt plugins
+
+commit b4cd6e8
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    major updates including links to examples and references
+
+commit 955fe2e
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    various updates and improvements
+
+commit 557afa4
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    minor update of JDK section
+
+commit d8ec957
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    minor update of IDEA section
+
+commit 7976638
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    created new chapter to consolidate all instructions on setting up dev env and tools
+
+commit 8be6286
+Author: Konstantin Laufer <laufer@cs.luc.edu>
+
+    initial import
