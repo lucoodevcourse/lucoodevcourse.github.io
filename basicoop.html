@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Basics of Object-Oriented Programming &mdash; COMP 313/413 Lecture Notes 1.0 documentation</title>
+  <title>4. Basics of Object-Oriented Programming &mdash; COMP 313/413 Lecture Notes 1.0 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Overview of a Lightweight Development Process" href="devprocess.html" />
-    <link rel="prev" title="2. Course Outline" href="outline.html" /> 
+    <link rel="next" title="5. Summary" href="summary.html" />
+    <link rel="prev" title="3. Context and Background" href="devprocess.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,64 +89,64 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outline.html">2. Course Outline</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Basics of Object-Oriented Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#reference-semantics-vs-value-semantics">3.1. Reference semantics vs. value semantics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#examples">3.1.1. Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#references">3.1.2. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devprocess.html">3. Context and Background</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Basics of Object-Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reference-semantics-vs-value-semantics">4.1. Reference semantics vs. value semantics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples">4.1.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">4.1.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#equality-vs-identity">3.2. Equality vs. identity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">3.2.1. Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">3.2.2. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#equality-vs-identity">4.2. Equality vs. identity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">4.2.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">4.2.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#parametric-polymorphism-generics">3.3. Parametric polymorphism (generics)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id9">3.3.1. Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">3.3.2. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parametric-polymorphism-generics">4.3. Parametric polymorphism (generics)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">4.3.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">4.3.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#relationships-among-classes-and-interfaces">3.4. Relationships among classes and interfaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#class-interface-level-relationships">3.4.1. Class/interface-level relationships</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#instance-level-relationships">3.4.2. Instance-level relationships</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">3.4.3. Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relationships-among-classes-and-interfaces">4.4. Relationships among classes and interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-interface-level-relationships">4.4.1. Class/interface-level relationships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instance-level-relationships">4.4.2. Instance-level relationships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">4.4.3. Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#class-interface-continuum">3.5. Class-interface continuum</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id16">3.5.1. Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id19">3.5.2. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-interface-continuum">4.5. Class-interface continuum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">4.5.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">4.5.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#subtyping-vs-subclassing-inheritance">3.6. Subtyping vs. subclassing/inheritance</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id23">3.6.1. Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id26">3.6.2. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subtyping-vs-subclassing-inheritance">4.6. Subtyping vs. subclassing/inheritance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">4.6.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">4.6.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#subtype-polymorphism-static-vs-dynamic-type">3.7. Subtype polymorphism: static vs. dynamic type</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id29">3.7.1. Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id30">3.7.2. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subtype-polymorphism-static-vs-dynamic-type">4.7. Subtype polymorphism: static vs. dynamic type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id29">4.7.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">4.7.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#being-a-good-descendant-of-java-lang-object-system-object">3.8. Being a good descendant of java.lang.Object/System.Object</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id33">3.8.1. Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id37">3.8.2. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#being-a-good-descendant-of-java-lang-object-system-object">4.8. Being a good descendant of java.lang.Object/System.Object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id33">4.8.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">4.8.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#clone-in-the-context-of-the-composite-pattern">3.9. Clone in the context of the Composite pattern</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id42">3.9.1. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clone-in-the-context-of-the-composite-pattern">4.9. Clone in the context of the Composite pattern</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id42">4.9.1. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#packages-namespaces">3.10. Packages/namespaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id46">3.10.1. Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id47">3.10.2. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packages-namespaces">4.10. Packages/namespaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id46">4.10.1. Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id47">4.10.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#member-access">3.11. Member access</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id51">3.11.1. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#member-access">4.11. Member access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id51">4.11.1. References</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="devprocess.html">4. Overview of a Lightweight Development Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="summary.html">5. Summary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="software.html">6. Appendix: Course Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">7. Appendix: Course Syllabi</a></li>
@@ -197,7 +197,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>Basics of Object-Oriented Programming</li>
+      <li><span class="section-number">4. </span>Basics of Object-Oriented Programming</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -217,7 +217,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="basics-of-object-oriented-programming">
-<h1><span class="section-number">3. </span>Basics of Object-Oriented Programming<a class="headerlink" href="#basics-of-object-oriented-programming" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4. </span>Basics of Object-Oriented Programming<a class="headerlink" href="#basics-of-object-oriented-programming" title="Permalink to this headline">¶</a></h1>
 <p>The topics discussed in this chapter are considered the basics of
 object-oriented programming. Some of them are language-independent,
 others are specific to C#, Java, or Scala. These topics, except
@@ -229,21 +229,21 @@ CS 1/2 prerequisite chain for this course.</p>
 <a class="reference external" href="http://laufer.cs.luc.edu/teaching/313/handouts/oop-basics">here</a></p>
 </div>
 <div class="section" id="reference-semantics-vs-value-semantics">
-<h2><span class="section-number">3.1. </span>Reference semantics vs. value semantics<a class="headerlink" href="#reference-semantics-vs-value-semantics" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Reference semantics vs. value semantics<a class="headerlink" href="#reference-semantics-vs-value-semantics" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><em>Value semantics:</em> variables directly contain values.</p></li>
 <li><p><em>Reference semantics:</em> variables contain addresses that refer (point)
 to objects.</p></li>
 </ul>
 <div class="section" id="examples">
-<h3><span class="section-number">3.1.1. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.1. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/IdentityAndEquality.java">misc/IdentityAndEquality.java</a></p></li>
 <li><p><a class="reference external" href="https://github.com/lucproglangcourse/misc-scala/tree/master/src/main/scala/misc/Comparing.scala">misc/Comparing.scala</a></p></li>
 </ul>
 </div>
 <div class="section" id="references">
-<h3><span class="section-number">3.1.2. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.2. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="http://c2.com/cgi/wiki?JavaDoesntPassByValue">Java</a></p></li>
 <li><p><a class="reference external" href="http://msdn.microsoft.com/en-us/library/ms173109.aspx">C#</a> (see also <em>Effective C#</em> item 6)</p></li>
@@ -251,7 +251,7 @@ to objects.</p></li>
 </div>
 </div>
 <div class="section" id="equality-vs-identity">
-<h2><span class="section-number">3.2. </span>Equality vs. identity<a class="headerlink" href="#equality-vs-identity" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Equality vs. identity<a class="headerlink" href="#equality-vs-identity" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><em>Equality:</em> are two (possibly) different objects equivalent?</p></li>
 <li><p><em>Identity:</em> do two references refer to the same objects?</p></li>
@@ -260,14 +260,14 @@ to objects.</p></li>
 explained as equality of addresses.</p></li>
 </ul>
 <div class="section" id="id2">
-<h3><span class="section-number">3.2.1. </span>Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.1. </span>Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/IdentityAndEquality.java">misc/IdentityAndEquality.java</a></p></li>
 <li><p><a class="reference external" href="https://github.com/lucproglangcourse/misc-scala/tree/master/src/main/scala/misc/Comparing.scala">misc/Comparing.scala</a></p></li>
 </ul>
 </div>
 <div class="section" id="id5">
-<h3><span class="section-number">3.2.2. </span>References<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.2. </span>References<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://learning.oreilly.com/library/view/effective-java/9780134686097/ch3.xhtml">Effective Java chapter 3 items 10-11</a></p></li>
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object)">Java</a>
@@ -277,7 +277,7 @@ explained as equality of addresses.</p></li>
 </div>
 </div>
 <div class="section" id="parametric-polymorphism-generics">
-<h2><span class="section-number">3.3. </span>Parametric polymorphism (generics)<a class="headerlink" href="#parametric-polymorphism-generics" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3. </span>Parametric polymorphism (generics)<a class="headerlink" href="#parametric-polymorphism-generics" title="Permalink to this headline">¶</a></h2>
 <p>Familiar from data structures course:</p>
 <ul class="simple">
 <li><p>without generics: <code class="docutils literal notranslate"><span class="pre">Stack</span></code> (of objects); loose typing</p></li>
@@ -289,14 +289,14 @@ strict typing without code duplication</p></li>
 <p>Relatively easy to use, can be challenging to incorporate correctly in
 the design of one’s abstractions.</p>
 <div class="section" id="id9">
-<h3><span class="section-number">3.3.1. </span>Examples<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.1. </span>Examples<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/Comparing.java">misc/Comparing.java</a></p></li>
 <li><p><a class="reference external" href="https://github.com/lucproglangcourse/misc-scala/tree/master/src/main/scala/misc/Comparing.scala">misc/Comparing.scala</a></p></li>
 </ul>
 </div>
 <div class="section" id="id11">
-<h3><span class="section-number">3.3.2. </span>References<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.2. </span>References<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://learning.oreilly.com/library/view/effective-java/9780134686097/ch5.xhtml">Effective Java chapter 5</a></p></li>
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/generics">Java</a>
@@ -309,11 +309,11 @@ for advanced issues)</p></li>
 </div>
 </div>
 <div class="section" id="relationships-among-classes-and-interfaces">
-<h2><span class="section-number">3.4. </span>Relationships among classes and interfaces<a class="headerlink" href="#relationships-among-classes-and-interfaces" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4. </span>Relationships among classes and interfaces<a class="headerlink" href="#relationships-among-classes-and-interfaces" title="Permalink to this headline">¶</a></h2>
 <p>These are common relationships among concepts and are <a class="reference external" href="http://en.wikipedia.org/wiki/Class_diagram#Relationships">part of UML's
 class diagrams</a>.</p>
 <div class="section" id="class-interface-level-relationships">
-<h3><span class="section-number">3.4.1. </span>Class/interface-level relationships<a class="headerlink" href="#class-interface-level-relationships" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.4.1. </span>Class/interface-level relationships<a class="headerlink" href="#class-interface-level-relationships" title="Permalink to this headline">¶</a></h3>
 <p>These relationships are between classes and/or interfaces, so they
 <em>cannot</em> change at run time.</p>
 <p>From strong to weak:</p>
@@ -323,7 +323,7 @@ class diagrams</a>.</p>
 </ul>
 </div>
 <div class="section" id="instance-level-relationships">
-<h3><span class="section-number">3.4.2. </span>Instance-level relationships<a class="headerlink" href="#instance-level-relationships" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.4.2. </span>Instance-level relationships<a class="headerlink" href="#instance-level-relationships" title="Permalink to this headline">¶</a></h3>
 <p>These relationships are between instances, so they <em>can</em> change at run
 time.</p>
 <p>From strong to weak:</p>
@@ -334,7 +334,7 @@ time.</p>
 </ul>
 </div>
 <div class="section" id="id15">
-<h3><span class="section-number">3.4.3. </span>Examples<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.4.3. </span>Examples<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/Animals.java">misc/Animals.java</a></p></li>
 <li><p><a class="reference external" href="https://github.com/lucproglangcourse/misc-scala/tree/master/src/main/scala/misc/Animals.scala">misc/Animals.scala</a></p></li>
@@ -347,7 +347,7 @@ time.</p>
 </div>
 </div>
 <div class="section" id="class-interface-continuum">
-<h2><span class="section-number">3.5. </span>Class-interface continuum<a class="headerlink" href="#class-interface-continuum" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.5. </span>Class-interface continuum<a class="headerlink" href="#class-interface-continuum" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><em>Concrete class</em> (C++, C#, Java, Scala): can be instantiated. All
 specified methods are fully implemented.</p></li>
@@ -365,14 +365,14 @@ implemented, and there are no instance variables.</p></li>
 </ul>
 <p>Related to the single-responsibility and interface-segregation principles.</p>
 <div class="section" id="id16">
-<h3><span class="section-number">3.5.1. </span>Examples<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.5.1. </span>Examples<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/Animals.java">misc/Animals.java</a></p></li>
 <li><p><a class="reference external" href="https://github.com/lucproglangcourse/misc-scala/tree/master/src/main/scala/misc/Animals.scala">misc/Animals.scala</a></p></li>
 </ul>
 </div>
 <div class="section" id="id19">
-<h3><span class="section-number">3.5.2. </span>References<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.5.2. </span>References<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://learning.oreilly.com/library/view/effective-java/9780134686097/ch4.xhtml">Effective Java chapter 4 items 19-23</a></p></li>
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Java</a></p></li>
@@ -383,7 +383,7 @@ also <em>Effective C#</em> items 22, 23)</p></li>
 </div>
 </div>
 <div class="section" id="subtyping-vs-subclassing-inheritance">
-<h2><span class="section-number">3.6. </span>Subtyping vs. subclassing/inheritance<a class="headerlink" href="#subtyping-vs-subclassing-inheritance" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.6. </span>Subtyping vs. subclassing/inheritance<a class="headerlink" href="#subtyping-vs-subclassing-inheritance" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://en.wikipedia.org/wiki/Subtyping">Subtyping</a> allows
 substituting a more specific object for a more
@@ -407,14 +407,14 @@ subtyping (and semantic subtyping because interfaces have no
 behavior). Extending a trait also enables syntactic subtyping.</p></li>
 </ul>
 <div class="section" id="id23">
-<h3><span class="section-number">3.6.1. </span>Examples<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.6.1. </span>Examples<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/Animals.java">misc/Animals.java</a></p></li>
 <li><p><a class="reference external" href="https://github.com/lucproglangcourse/misc-scala/tree/master/src/main/scala/misc/Animals.scala">misc/Animals.scala</a></p></li>
 </ul>
 </div>
 <div class="section" id="id26">
-<h3><span class="section-number">3.6.2. </span>References<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.6.2. </span>References<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://learning.oreilly.com/library/view/effective-java/9780134686097/ch4.xhtml">Effective Java chapter 4 item 19</a></p></li>
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Java</a>
@@ -425,7 +425,7 @@ also <em>Effective C#</em> item 22)</p></li>
 </div>
 </div>
 <div class="section" id="subtype-polymorphism-static-vs-dynamic-type">
-<h2><span class="section-number">3.7. </span>Subtype polymorphism: static vs. dynamic type<a class="headerlink" href="#subtype-polymorphism-static-vs-dynamic-type" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.7. </span>Subtype polymorphism: static vs. dynamic type<a class="headerlink" href="#subtype-polymorphism-static-vs-dynamic-type" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><em>Static type:</em> declared type of a variable.</p></li>
 <li><p><em>Dynamic type:</em> actual type of the object to which the variable
@@ -449,7 +449,7 @@ different situations:
 - <code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code>/<code class="docutils literal notranslate"><span class="pre">override</span></code> correctness in Java and Scala</p></li>
 </ul>
 <div class="section" id="id29">
-<h3><span class="section-number">3.7.1. </span>Examples<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.1. </span>Examples<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/MethodBinding.java">misc/MethodBinding.java</a></p></li>
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/InterfaceCast.java">misc/InterfaceCast.java</a></p></li>
@@ -460,7 +460,7 @@ different situations:
 </ul>
 </div>
 <div class="section" id="id30">
-<h3><span class="section-number">3.7.2. </span>References<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.2. </span>References<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://learning.oreilly.com/library/view/effective-java/9780134686097/ch8.xhtml">Effective Java chapter 8 item 52</a></p></li>
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html">Java</a></p></li>
@@ -470,7 +470,7 @@ also <em>Effective C#</em> item 3)</p></li>
 </div>
 </div>
 <div class="section" id="being-a-good-descendant-of-java-lang-object-system-object">
-<h2><span class="section-number">3.8. </span>Being a good descendant of java.lang.Object/System.Object<a class="headerlink" href="#being-a-good-descendant-of-java-lang-object-system-object" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.8. </span>Being a good descendant of java.lang.Object/System.Object<a class="headerlink" href="#being-a-good-descendant-of-java-lang-object-system-object" title="Permalink to this headline">¶</a></h2>
 <p>Classes are usually required to provide the following methods (these
 specific ones are for Java):</p>
 <ul class="simple">
@@ -484,7 +484,7 @@ other instances)</p></li>
 </ul>
 <p>Also related to the Liskov substitution principle.</p>
 <div class="section" id="id33">
-<h3><span class="section-number">3.8.1. </span>Examples<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.8.1. </span>Examples<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/IdentityAndEquality.java">misc/IdentityAndEquality.java</a></p></li>
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/Comparing.java">misc/Comparing.java</a></p></li>
@@ -492,7 +492,7 @@ other instances)</p></li>
 </ul>
 </div>
 <div class="section" id="id37">
-<h3><span class="section-number">3.8.2. </span>References<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.8.2. </span>References<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://learning.oreilly.com/library/view/effective-java/9780134686097/ch3.xhtml">Effective Java chapter 3</a></p></li>
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html">Java</a>
@@ -504,7 +504,7 @@ also <em>Effective C#</em> items 5, 9, 10, 27)</p></li>
 </div>
 </div>
 <div class="section" id="clone-in-the-context-of-the-composite-pattern">
-<h2><span class="section-number">3.9. </span>Clone in the context of the Composite pattern<a class="headerlink" href="#clone-in-the-context-of-the-composite-pattern" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.9. </span>Clone in the context of the Composite pattern<a class="headerlink" href="#clone-in-the-context-of-the-composite-pattern" title="Permalink to this headline">¶</a></h2>
 <p>In general, cloning allows you to make a copy of an object. The clone
 method in Java is similar to the copy constructor in C++, but it is an
 ordinary method, unlike the copy constructor. Once you have the
@@ -530,7 +530,7 @@ state and recursively cloning its children.</p>
 objects are immutable because you wouldn’t be able to distinguish the
 original from the clone anyway.</em></p>
 <div class="section" id="id42">
-<h3><span class="section-number">3.9.1. </span>References<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.9.1. </span>References<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://learning.oreilly.com/library/view/effective-java/9780134686097/ch3.xhtml">Effective Java chapter 3 item 13</a></p></li>
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html">Java</a>
@@ -542,7 +542,7 @@ for more detail)</p></li>
 </div>
 </div>
 <div class="section" id="packages-namespaces">
-<h2><span class="section-number">3.10. </span>Packages/namespaces<a class="headerlink" href="#packages-namespaces" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.10. </span>Packages/namespaces<a class="headerlink" href="#packages-namespaces" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Mechanism for grouping related or collaborating classes (cf. default
 package-level member access).</p></li>
@@ -551,13 +551,13 @@ system. In Scala, this is much looser.</p></li>
 <li><p>In addition, in Java, each <em>public</em> class must be in a separate file whose name matches the class name.</p></li>
 </ul>
 <div class="section" id="id46">
-<h3><span class="section-number">3.10.1. </span>Examples<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.10.1. </span>Examples<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/lucoodevcourse/misc-java/tree/master/src/main/java/misc/Outer.java">misc/Outer.java</a></p></li>
 </ul>
 </div>
 <div class="section" id="id47">
-<h3><span class="section-number">3.10.2. </span>References<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.10.2. </span>References<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/package">Java</a> (see
 also <a class="reference external" href="http://www.artima.com/objectsandjava/webuscript/PackagesAccess1.html">here</a>)</p></li>
@@ -566,7 +566,7 @@ also <a class="reference external" href="http://www.artima.com/objectsandjava/we
 </div>
 </div>
 <div class="section" id="member-access">
-<h2><span class="section-number">3.11. </span>Member access<a class="headerlink" href="#member-access" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.11. </span>Member access<a class="headerlink" href="#member-access" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>public</p></li>
 <li><p>protected</p></li>
@@ -575,7 +575,7 @@ also <a class="reference external" href="http://www.artima.com/objectsandjava/we
 </ul>
 <p>Related to the information hiding and open-closed principles.</p>
 <div class="section" id="id51">
-<h3><span class="section-number">3.11.1. </span>References<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.11.1. </span>References<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://learning.oreilly.com/library/view/effective-java/9780134686097/ch4.xhtml">Effective Java chapter 4 items 19-23</a></p></li>
 <li><p><a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html">Java</a>
@@ -595,10 +595,10 @@ also <a href="#id56"><span class="problematic" id="id57">*</span></a>Effective C
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="devprocess.html" class="btn btn-neutral float-right" title="4. Overview of a Lightweight Development Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="summary.html" class="btn btn-neutral float-right" title="5. Summary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="outline.html" class="btn btn-neutral float-left" title="2. Course Outline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="devprocess.html" class="btn btn-neutral float-left" title="3. Context and Background" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

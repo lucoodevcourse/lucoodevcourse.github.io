@@ -1,3 +1,34 @@
+commit ffd1415
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    updated key dates
+
+commit 17019b3
+Merge: 4cae93a cd3c6c4
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    Merge branch 'main' of github.com:loyolachicagocsbooks/lucoodevcourse into main
+
+commit 4cae93a
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    fleshed out context/background chapter and moved up
+
+commit cd3c6c4
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    removed bad internal link
+
+commit 6830b71
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    added missing Bloom levels to f21 syllabus
+
+commit 28a071e
+Author: Konstantin Läufer <klaeufer@gmail.com>
+
+    fixed errors in f21 syllabus
+
 commit 4865c23
 Author: Konstantin Läufer <klaeufer@gmail.com>
 

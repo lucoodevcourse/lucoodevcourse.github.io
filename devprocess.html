@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Overview of a Lightweight Development Process &mdash; COMP 313/413 Lecture Notes 1.0 documentation</title>
+  <title>3. Context and Background &mdash; COMP 313/413 Lecture Notes 1.0 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Summary" href="summary.html" />
-    <link rel="prev" title="3. Basics of Object-Oriented Programming" href="basicoop.html" /> 
+    <link rel="next" title="4. Basics of Object-Oriented Programming" href="basicoop.html" />
+    <link rel="prev" title="2. Course Outline" href="outline.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,8 +89,13 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outline.html">2. Course Outline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basicoop.html">3. Basics of Object-Oriented Programming</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Overview of a Lightweight Development Process</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Context and Background</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#software-requirements">3.1. Software requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-a-lightweight-development-process">3.2. Overview of a lightweight development process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-design-principles-and-patterns">3.3. Software design principles and patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basicoop.html">4. Basics of Object-Oriented Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="summary.html">5. Summary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="software.html">6. Appendix: Course Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">7. Appendix: Course Syllabi</a></li>
@@ -141,7 +146,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">4. </span>Overview of a Lightweight Development Process</li>
+      <li><span class="section-number">3. </span>Context and Background</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -160,15 +165,134 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="overview-of-a-lightweight-development-process">
-<h1><span class="section-number">4. </span>Overview of a Lightweight Development Process<a class="headerlink" href="#overview-of-a-lightweight-development-process" title="Permalink to this headline">¶</a></h1>
-<p>A successful development process usually comprises these minimal
-elements:</p>
+  <div class="section" id="context-and-background">
+<h1><span class="section-number">3. </span>Context and Background<a class="headerlink" href="#context-and-background" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter, we establish a practical context and provide some background information for the study of object-oriented programming, patterns, and principles.</p>
+<div class="section" id="software-requirements">
+<h2><span class="section-number">3.1. </span>Software requirements<a class="headerlink" href="#software-requirements" title="Permalink to this headline">¶</a></h2>
+<p>In most cases, we develop software to provide some form of value:</p>
 <ul class="simple">
-<li><p>automated regression testing</p></li>
-<li><p>refactoring</p></li>
-<li><p>continuous integration</p></li>
+<li><p>learn a language, library, framework, platform, technique, or tool
+(see also the <a class="reference external" href="https://www.thoughtworks.com/radar">ThoughtWorks Technology Radar</a>)</p></li>
+<li><p>solve a problem</p></li>
+<li><p>produce an asset</p></li>
 </ul>
+<p>There is usually some tension among these three activities.</p>
+<p>The basic categories of requirements are</p>
+<ul class="simple">
+<li><p>functional (FR)</p>
+<ul>
+<li><p>output as function of input: <cite>y = f(x)</cite></p></li>
+<li><p>or some other description of observable behavior</p>
+<ul>
+<li><p>batch</p></li>
+<li><p>interactive/event-based</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>nonfunctional (NFR): additional properties of <cite>f</cite>, e.g.</p>
+<ul>
+<li><p>testability</p>
+<ul>
+<li><p>most important nonfunctional requirement</p></li>
+<li><p>allows testing whether functional requirements are met</p></li>
+<li><p>good architecture often happens as a side-effect (APPP pp. 36-38), such as separating I/O from core functionality</p></li>
+</ul>
+</li>
+<li><p>performance</p></li>
+<li><p>scalability</p>
+<ul>
+<li><p>e.g. performance for large data sets: asymptotic order of complexity</p></li>
+<li><p>(big-Oh) in terms of input size n</p></li>
+</ul>
+</li>
+<li><p>reliability</p></li>
+<li><p>maintainability</p></li>
+<li><p>static versus dynamic NFRs</p></li>
+</ul>
+</li>
+</ul>
+<p>Several common questions and issues related to requirements arise:</p>
+<ul class="simple">
+<li><p><em>how do requirements relate to the project development lifecycle?</em></p></li>
+<li><p><em>BUFD versus MVP</em></p></li>
+<li><p><em>how do testing and refactoring relate to requirements?</em></p></li>
+</ul>
+<p>The following figure by Kazman relates unit operations (high-level generalizations of refactorings) and software quality factors (nonfunctional requirements).</p>
+<div class="figure align-default">
+<img alt="_images/KazmanQualityFactors.png" src="_images/KazmanQualityFactors.png" />
+</div>
+</div>
+<div class="section" id="overview-of-a-lightweight-development-process">
+<h2><span class="section-number">3.2. </span>Overview of a lightweight development process<a class="headerlink" href="#overview-of-a-lightweight-development-process" title="Permalink to this headline">¶</a></h2>
+<p>A successful development process usually comprises these minimal elements:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://martinfowler.com/bliki/SelfTestingCode.html">automated regression testing</a></p>
+<ul>
+<li><p>tests represent expectations of how the software should behave</p></li>
+<li><p>when expressed as code, these are</p>
+<ul>
+<li><p>fun to produce (like other coding)</p></li>
+<li><p>convenient to run frequently</p></li>
+</ul>
+</li>
+<li><p>fix system-under-test (SUT) (not tests themselves) until tests pass</p></li>
+<li><p>retest every time</p>
+<ul>
+<li><p>a feature is added</p></li>
+<li><p>the code is refactored</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.refactoring.com/">refactoring</a></p>
+<ul>
+<li><p>improve the quality of the code without changing its behavior</p>
+<ul>
+<li><p>macro level: nonfunctional requirements (quality factors)</p></li>
+<li><p>micro level: <a class="reference external" href="https://refactoring.guru/smells/smells">code smells</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://refactoring.com/catalog/">catalog of refactorings</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.martinfowler.com/articles/continuousIntegration.html">continuous integration</a></p></li>
+</ul>
+<p>The <a class="reference external" href="https://github.com/lucproglangcourse/processtree-scala">process tree</a> example illustrates continuous integration using various hosted services:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://travis-ci.org/LoyolaChicagoCode/processtree-scala">Travis CI</a>: continuous integration</p></li>
+<li><p><a class="reference external" href="https://codecov.io/gh/LoyolaChicagoCode/processtree-scala">Codecov</a>: test coverage</p></li>
+<li><p><a class="reference external" href="https://www.codacy.com/app/laufer/processtree-scala">Codacy</a>: automated code review</p></li>
+<li><p><a class="reference external" href="http://issuestats.com/github/LoyolaChicagoCode/processtree-scala">IssueStats</a> and <a class="reference external" href="http://isitmaintained.com/project/LoyolaChicagoCode/processtree-scala">IsItMaintained</a>: stats on issues and pull requests</p></li>
+</ul>
+<p>The <a class="reference external" href="https://github.com/LoyolaChicagoCode/clickcounter-android-java">click counter</a> example includes additional hosted continuous integration and delivery targets suitable for mobile app development.</p>
+</div>
+<div class="section" id="software-design-principles-and-patterns">
+<h2><span class="section-number">3.3. </span>Software design principles and patterns<a class="headerlink" href="#software-design-principles-and-patterns" title="Permalink to this headline">¶</a></h2>
+<p>The software development community has identified various principles intended to guide the design and development process, for example:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> (don’t repeat yourself)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">SoC</a> (separation of concerns)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a></p></li>
+</ul>
+<p>The community has also developed a body of <a class="reference external" href="https://sourcemaking.com/design_patterns">design patterns</a> that represent reusable solutions to recurring problems. Some key design patterns we will rely on in this course include</p>
+<ul class="simple">
+<li><p>Iterator</p></li>
+<li><p>Strategy</p></li>
+<li><p>Command</p></li>
+<li><p>Composite</p></li>
+<li><p>Decorator</p></li>
+<li><p>Visitor</p></li>
+<li><p>Abstract Factory</p></li>
+<li><p>Observer</p></li>
+</ul>
+<p>We will study these topics throughout the course.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Language-specific design patterns are called <em>idioms</em>.</p>
+</div>
+</div>
 </div>
 
 
@@ -179,10 +303,10 @@ elements:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="summary.html" class="btn btn-neutral float-right" title="5. Summary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="basicoop.html" class="btn btn-neutral float-right" title="4. Basics of Object-Oriented Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="basicoop.html" class="btn btn-neutral float-left" title="3. Basics of Object-Oriented Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="outline.html" class="btn btn-neutral float-left" title="2. Course Outline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
